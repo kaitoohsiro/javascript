@@ -1,0 +1,45 @@
+body {
+    text-align: center;
+}
+#cal {
+    text-align:center;
+    margin: auto;
+    padding: 10px;
+    border: 2px solid #000;
+    height: 160px;
+    width: 130px;
+}
+.clear {
+    background-color: red;
+}
+.delete {
+    background-color: rgb(94, 94, 241);
+}
+.equal {
+    background-color: lightgreen;
+}
+#display_wrap {
+    margin: auto;
+    width: 120px;
+    height: 25px;
+    border: 1px solid #000;
+    overflow: hidden;
+}
+.btn {
+    margin: auto;
+    width: 100%;
+}
+.btn .buttons {
+    display: inline-block;
+}
+.btn .button .big {
+    height: 110px;
+}
+
+
+.button {
+    display: flex;
+}
+p {
+    margin:0;
+}

@@ -1,12 +1,12 @@
-// 表示要素
+表示要素
 let timer = document.getElementById('timer');
-let wrapTimer = document.getElementById('wrapTimer');
-let wrapList = document.getElementById('wrapList');
+// let wrapTimer = document.getElementById('wrapTimer');
+// let wrapList = document.getElementById('wrapList');
 
 // ボタン要素
 let start = document.getElementById('start');
 let stop = document.getElementById('stop');
-let wrap = document.getElementById('wrap');
+// let wrap = document.getElementById('wrap');
 let resume = document.getElementById('resume');
 let reset = document.getElementById('reset');
 
@@ -20,25 +20,39 @@ let ms_element = 0;
 
 timer.innerHTML = time;
 
+// // ストップウォッチスタート処理
+// start.addEventListener('click', function ()
+// {
+    
+//     // タイマースタート
+//     controller = setInterval(TimerEvent, 10);
+//     // 画面に表示・非表示
+//     start.classList.add('hidden');
+//     stop.classList.remove('hidden');
+//     // wrap.classList.remove('hidden');
+// });
+
 // ストップウォッチスタート処理
 start.addEventListener('click', function ()
 {
+    let standardTime = Date.now();
     // タイマースタート
     controller = setInterval(TimerEvent, 10);
     // 画面に表示・非表示
     start.classList.add('hidden');
     stop.classList.remove('hidden');
-    wrap.classList.remove('hidden');
+    // wrap.classList.remove('hidden');
 });
 
 // ストップウォッチ停止処理
 stop.addEventListener('click', function ()
 {
+    Date.now()
     // タイマー停止
     controller = clearInterval(controller);
     // 画面に表示・非表示
     stop.classList.add('hidden');
-    wrap.classList.add('hidden');
+    // wrap.classList.add('hidden');
     resume.classList.remove('hidden');
     reset.classList.remove('hidden');
 });
@@ -52,8 +66,8 @@ resume.addEventListener('click', function ()
     resume.classList.add('hidden');
     reset.classList.add('hidden');
     stop.classList.remove('hidden');
-    wrap.classList.remove('hidden');
-})
+    // wrap.classList.remove('hidden');
+});
 
 // ストップウォッチリセット処理
 reset.addEventListener('click', function ()
@@ -67,7 +81,7 @@ reset.addEventListener('click', function ()
     // 画面表示・非表示
     resume.classList.add('hidden');
     reset.classList.add('hidden');
-    wrapTimer.classList.add('hidden');
+    // wrapTimer.classList.add('hidden');
     start.classList.remove('hidden');
 })
 
